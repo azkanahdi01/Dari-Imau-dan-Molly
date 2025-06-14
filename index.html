@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semangat Selalu, Syifa!</title>
+    <!-- Memuat Tailwind CSS untuk styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Memuat library untuk efek confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <style>
+        /* Mengatur font kustom */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3, button {
+            font-family: 'Fredoka', sans-serif;
+        }
+        /* Style untuk transisi slide */
+        .slide {
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .slide.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        /* Memastikan gambar tidak terdistorsi */
+        .object-cover {
+           object-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 min-h-screen flex items-center justify-center p-4 overflow-hidden">
+
+    <!-- Kontainer Utama -->
+    <div class="w-full max-w-4xl bg-white bg-opacity-80 backdrop-blur-sm rounded-3xl shadow-2xl p-6 md:p-10 text-center transform transition-all duration-500">
+        
+        <!-- Kontainer Slide -->
+        <div id="slides-container" class="relative min-h-[450px] flex items-center">
+
+            <!-- Slide 1: Pesan dari Imau dan Moly -->
+            <div id="slide1" class="slide absolute w-full">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+                    Syifa Zahrina Barlian
+                </h1>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-yellow-200 to-orange-300 p-6 rounded-2xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1548550023-2e96a2417443?q=80&w=800&auto=format&fit=crop" alt="Foto Harimau" class="w-48 h-48 mx-auto rounded-full object-cover border-4 border-white shadow-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/FBBF24/333333?text=Imau';">
+                        <h2 class="text-3xl font-bold text-orange-800">Pesan dari Imau</h2>
+                        <p class="text-orange-700 mt-2 text-md">
+                            "Setiap orang punya kekuatan seperti imau yang kuat, jadi apapun masalahnya InsyaAllah pasti bisa. Hihihihi."
+                        </p>
+                    </div>
+                    <div class="bg-gradient-to-br from-sky-200 to-indigo-300 p-6 rounded-2xl shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=800&auto=format&fit=crop" alt="Foto Kucing" class="w-48 h-48 mx-auto rounded-full object-cover border-4 border-white shadow-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/A5B4FC/333333?text=Moly';">
+                        <h2 class="text-3xl font-bold text-indigo-800">Pesan dari Moly</h2>
+                        <p class="text-indigo-700 mt-2 text-md">
+                            "Jangan lupa untuk rehat, jangan telat makan dan jaga kesehatan, semangatt luvv."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Mode Harimau vs Kucing -->
+            <div id="slide2" class="slide absolute w-full">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+                    Apa Perasaanmu Hari Ini?
+                </h1>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-red-200 p-6 rounded-2xl shadow-lg">
+                        <h2 class="text-3xl font-bold text-red-800">Mode Imau</h2>
+                        <p class="text-red-700 mt-2 text-md">
+                           Mood nya lagi kurang baik, mukanya cemberut dan ada sedikit suka ngambeknya.
+                        </p>
+                    </div>
+                    <div class="bg-blue-200 p-6 rounded-2xl shadow-lg">
+                        <h2 class="text-3xl font-bold text-blue-800">Mode Moly</h2>
+                        <p class="text-blue-700 mt-2 text-md">
+                           Lagi seneng hawanya mau senyum karena hangat dan menyenangkan, dan lagi rajin makan, ga bandel juga.
+                        </p>
+                    </div>
+                </div>
+                 <p class="text-gray-600 mt-8 font-semibold">Apapun moodnya yang penting tetep nyaman dan sayang kan? Hihihi.</p>
+            </div>
+
+            <!-- Slide 3: Galeri Momen Semangat -->
+            <div id="slide3" class="slide absolute w-full">
+                 <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
+                    Galeri Pengingat
+                </h1>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="flex flex-col items-center">
+                        <img src="https://placehold.co/300x300/86EFAC/333333?text=Bisa!" alt="Gambar Semangat 1" class="w-full rounded-xl shadow-lg mb-2">
+                        <p class="text-gray-600 font-semibold">Momen ketika cips berhasil melewati rintangan.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://placehold.co/300x300/FCA5A5/333333?text=%3C3" alt="Gambar Semangat 2" class="w-full rounded-xl shadow-lg mb-2">
+                        <p class="text-gray-600 font-semibold">Ingatlah ada banyak orang yang peduli sama cips termasuk yang nulis ini.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://placehold.co/300x300/93C5FD/333333?text=Rehat" alt="Gambar Semangat 3" class="w-full rounded-xl shadow-lg mb-2">
+                        <p class="text-gray-600 font-semibold">Waktunya istirahat untuk memulihkan energi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Pesan Terakhir dan Kejutan -->
+            <div id="slide4" class="slide absolute w-full">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    Satu Pesan
+                </h1>
+                <p class="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Berjuang tak meski berisik, mengalah bukan berarti kalah, untuk didengar tak perlu berteriak. Berjuanglah dengan ujian kita masing-masing. Jika lelah maka rehat dan bertahanlah sambil memikirkan langkah yang terarah. Karena hidup itu soal memahami ritme bukan? Tahu kapan harus berhenti, kapan harus lanjut dan kapan harus mengubah arah. Semoga Allah selalu memudahkan kita ya, Aamiin ❤️
+                </p>
+                <button id="surprise-button" class="bg-pink-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-pink-600 transform hover:scale-110 transition-all duration-300">
+                    Klik di Sini!
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Tombol Navigasi -->
+        <div class="flex justify-between items-center mt-8">
+            <button id="prev-button" class="bg-white/50 text-gray-700 font-bold py-2 px-6 rounded-full shadow-md hover:bg-white transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed">
+                Kembali
+            </button>
+            <div id="slide-indicator" class="flex space-x-2">
+                <!-- Indikator akan dibuat oleh JS -->
+            </div>
+            <button id="next-button" class="bg-white/50 text-gray-700 font-bold py-2 px-6 rounded-full shadow-md hover:bg-white transition-colors duration-300">
+                Lanjut
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Inisialisasi variabel
+        const slides = document.querySelectorAll('.slide');
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+        const surpriseButton = document.getElementById('surprise-button');
+        const slideIndicatorContainer = document.getElementById('slide-indicator');
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        // Membuat indikator slide
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('w-3', 'h-3', 'rounded-full', 'transition-colors', 'duration-300', 'cursor-pointer');
+            dot.dataset.slideIndex = i;
+            dot.addEventListener('click', () => {
+                currentSlide = i;
+                showSlide(currentSlide);
+            })
+            slideIndicatorContainer.appendChild(dot);
+        }
+        const slideIndicators = slideIndicatorContainer.querySelectorAll('div');
+
+        // Fungsi untuk menampilkan slide
+        function showSlide(slideIndex) {
+            slides.forEach((slide, index) => {
+                if (index === slideIndex) {
+                    slide.classList.remove('hidden');
+                    slide.classList.add('visible');
+                } else {
+                    slide.classList.remove('visible');
+                    slide.classList.add('hidden');
+                }
+            });
+            
+            // Update status tombol navigasi
+            prevButton.disabled = slideIndex === 0;
+            nextButton.disabled = slideIndex === totalSlides - 1;
+
+            // Update indikator
+            slideIndicators.forEach((dot, index) => {
+                dot.classList.remove('bg-pink-500', 'bg-gray-300');
+                if (index === slideIndex) {
+                    dot.classList.add('bg-pink-500');
+                } else {
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+        }
+
+        // Event listener untuk tombol lanjut
+        nextButton.addEventListener('click', () => {
+            if (currentSlide < totalSlides - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Event listener untuk tombol kembali
+        prevButton.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Event listener untuk tombol kejutan
+        surpriseButton.addEventListener('click', () => {
+            // Luncurkan animasi bintang!
+            confetti({
+                particleCount: 200,
+                spread: 180,
+                origin: { y: 0.6 },
+                shapes: ['star'],
+                colors: ['#FFD700', '#FFC300', '#FFFFFF', '#F0E68C'],
+                scalar: 1.2 // Membuat bintang lebih besar
+            });
+        });
+
+        // Tampilkan slide pertama saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide);
+        });
+    </script>
+</body>
+</html>
