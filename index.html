@@ -36,6 +36,14 @@
         .object-cover {
            object-position: center;
         }
+        /* Animasi Goyang (Wiggle) */
+        @keyframes wiggle {
+          0%, 100% { transform: rotate(-2deg); }
+          50% { transform: rotate(2deg); }
+        }
+        .wiggle-on-hover:hover {
+          animation: wiggle 0.4s ease-in-out infinite;
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-pink-200 via-purple-200 to-blue-200 min-h-screen flex items-center justify-center p-4 overflow-hidden">
@@ -49,20 +57,20 @@
             <!-- Slide 1: Pesan dari Imau dan Moly -->
             <div id="slide1" class="slide absolute w-full">
                 <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-8">
-                    Syifa Zahrina Barlian
+                    Syifa Zahrina Barlian ✨
                 </h1>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-gradient-to-br from-yellow-200 to-orange-300 p-6 rounded-2xl shadow-lg">
+                    <div class="bg-gradient-to-br from-yellow-200 to-orange-300 p-6 rounded-2xl shadow-lg wiggle-on-hover transition-transform duration-300">
                         <img src="https://images.unsplash.com/photo-1548550023-2e96a2417443?q=80&w=800&auto=format&fit=crop" alt="Foto Harimau" class="w-48 h-48 mx-auto rounded-full object-cover border-4 border-white shadow-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/FBBF24/333333?text=Imau';">
-                        <h2 class="text-3xl font-bold text-orange-800">Pesan dari Imau</h2>
+                        <h2 class="text-3xl font-bold text-orange-800">🐯 Pesan dari Imau</h2>
                         <p class="text-orange-700 mt-2 text-md">
                             "Setiap orang punya kekuatan seperti imau yang kuat, jadi apapun masalahnya InsyaAllah pasti bisa. Hihihihi."
                         </p>
                     </div>
-                    <div class="bg-gradient-to-br from-sky-200 to-indigo-300 p-6 rounded-2xl shadow-lg">
+                    <div class="bg-gradient-to-br from-sky-200 to-indigo-300 p-6 rounded-2xl shadow-lg wiggle-on-hover transition-transform duration-300">
                         <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=800&auto=format&fit=crop" alt="Foto Kucing" class="w-48 h-48 mx-auto rounded-full object-cover border-4 border-white shadow-md mb-4" onerror="this.onerror=null;this.src='https://placehold.co/400x400/A5B4FC/333333?text=Moly';">
-                        <h2 class="text-3xl font-bold text-indigo-800">Pesan dari Moly</h2>
+                        <h2 class="text-3xl font-bold text-indigo-800">🐱 Pesan dari Moly</h2>
                         <p class="text-indigo-700 mt-2 text-md">
                             "Jangan lupa untuk rehat, jangan telat makan dan jaga kesehatan, semangatt luvv."
                         </p>
@@ -76,14 +84,14 @@
                     Apa Perasaanmu Hari Ini?
                 </h1>
                  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="bg-red-200 p-6 rounded-2xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-red-800">Mode Imau</h2>
+                    <div class="bg-red-200 p-6 rounded-2xl shadow-lg wiggle-on-hover transition-transform duration-300">
+                        <h2 class="text-3xl font-bold text-red-800">Mode Imau 😠</h2>
                         <p class="text-red-700 mt-2 text-md">
                            Mood nya lagi kurang baik, mukanya cemberut dan ada sedikit suka ngambeknya.
                         </p>
                     </div>
-                    <div class="bg-blue-200 p-6 rounded-2xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-blue-800">Mode Moly</h2>
+                    <div class="bg-blue-200 p-6 rounded-2xl shadow-lg wiggle-on-hover transition-transform duration-300">
+                        <h2 class="text-3xl font-bold text-blue-800">Mode Moly 🤗</h2>
                         <p class="text-blue-700 mt-2 text-md">
                            Lagi seneng hawanya mau senyum karena hangat dan menyenangkan, dan lagi rajin makan, ga bandel juga.
                         </p>
